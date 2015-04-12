@@ -1,7 +1,7 @@
 Foosball Hack
 -------------
 
-Always wanted to make your foosball table better. Well here you go. With an arduino and a rasberry pi and a few other parts you can have a killer automated foosball table that tracks your games, score and team stats. 
+Always wanted to make your foosball table better? Well here you go. With an arduino and a rasberry pi and a few other parts you can have a killer automated foosball table that tracks your games, score and team stats. 
 
 Kickoff your games from a mobile device and view current game scores live on any browser.
 
