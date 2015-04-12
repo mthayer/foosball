@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jobvite Foosball</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+    <link rel="stylesheet" href="app.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <style>
+      /* TODO */
+    </style>
+  </head>
+  <body>
+    <!-- TEMPLATES -->
+    <script id="live-teams" type="text/x-handlebars-template">
+      <div class="awayteam" data-target="away-team">
+        <ul class="awayteam-list app-list"><li><div class="circleHome">H</div>{{homeTeam1}}</li><li><div class="circleHome">H</div>{{homeTeam2}}</li></ul>
+      </div>
+      <h2>- VS -</h2>
+      <div class="hometeam" data-target="home-team">
+        <ul class="hometeam-list app-list"><li><div class="circleAway">A</div>{{awayTeam1}}</li><li><div class="circleAway">A</div>{{awayTeam2}}</li></ul>
+      </div>
+    </script>
+
+    <script id="score-board" type="text/x-handlebars-template">
+    <div class="scoreboard home">
+      <h1>Home</h1>
+      <h2>{{homeScore}}</h2>
+    </div>
+    <div class="scoreboard away">
+      <h1>Away</h1>
+      <h2>{{awayScore}}</h2>
+    </div>
+    <div class="clearfix"></div>
+    </script>  
+
+    <script id="player-list-template" type="text/x-handlebars-template">
+      <ul id="home-team" class="app-list">
+        <label>Select two players</label>
+        {{#each this}}
+        <li class="app-button">{{this}}<span class="team-selected"></span></li>
+        {{/each}}
+      </ul>
+    </script>  
+        
+    <!-- LIVE-->
+    <div class="app-page" data-page="live">
+      <div class="app-content">
+        <div id="banner" class="banner app-button" data-target="home">
+          <h3>Scoreboard</h3>
+        </div>
+        <div id="board" class="app-section main-panel">
+          <!-- INSERT SCORE-BOARD TEMPLATE -->
+        </div>
+        <div id="live-teams" class="app-section main-panel">
+          <!-- INSERT LIVE-TEAMS TEMPLATE HERE -->
+        </div>
+        <div id="end-game-btn"></div>
+      </div>
+    </div>
+    <!-- PAGE 1 home-->
+    <div class="app-page" data-page="home">
+      <div class="app-content">
+        <div class="banner">
+          <h3>Jobvite Foosball</h3>
+        </div>
+        <div class="app-section main-panel">
+          <div class="app-button btn-home" data-target="home-team">Home</div>
+          <h2>- VS -</h2>
+          <div class="app-button btn-away" data-target="away-team">Away</div>
+        </div>
+      </div>
+    </div>
+    <!-- both selected-->
+    <div class="app-page" data-page="bothSelected">
+      <div class="app-content">
+        <div id="banner" class="banner app-button" data-target="home">
+          <h3>Good Luck</h3>
+        </div>
+        <div class="app-section main-panel" style="margin-top:0px">
+          <div class="awayteam" data-target="away-team">
+            <ul class="awayteam-list app-list">
+            </ul>
+          </div>
+          <h2>- VS -</h2>
+          <div class="hometeam" data-target="home-team">
+            <ul class="hometeam-list app-list">
+            </ul>
+          </div>
+        </div>
+        <div class="footer-fixed">
+          <div class="app-section">
+            <div id="kickoff-btn" class="app-button btn-away">Kickoff!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- away selected-->
+    <div class="app-page" data-page="awaySelected">
+      <div class="app-content">
+        <div id="banner" class="banner app-button" data-target="home">
+          <h3>Select Teams</h3>
+        </div>
+        <div class="app-section main-panel">
+          <div class="app-button btn-home" data-target="home-team">Home</div>
+          <h2>- VS -</h2>
+          <div class="awayteam" data-target="away-team">
+            <ul class="awayteam-list app-list">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- home selected-->
+    <div class="app-page" data-page="homeSelected">
+      <div class="app-content">
+        <div id="banner" class="banner app-button" data-target="home">
+          <h3>Select Teams</h3>
+        </div>
+        <div class="app-section main-panel">
+          <div class="hometeam" data-target="home-team">
+            <ul class="hometeam-list app-list">
+            </ul>
+          </div>
+          <h2>- VS -</h2>
+          <div class="app-button btn-away" data-target="away-team">Away</div>
+        </div>
+      </div>
+    </div>
+    <!-- home-team-->
+    <div class="app-page" data-page="home-team">
+      <div class="app-content">
+        <!-- in your app-content -->
+        <div id="player-list" class="app-section">
+          <!-- TEMPLATE HERE -->
+        </div>
+      </div>
+    </div>
+    <!-- away-team-->
+    <div class="app-page" data-page="away-team">
+      <div class="app-content">
+        <!-- in your app-content -->
+        <div id="player-list" class="app-section">
+          <!-- TEMPLATE HERE -->
+        </div>
+      </div>
+    </div>
+    <script src="js/libs/zepto.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.0.4.js"></script>
+    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script src="js/libs/app.min.js"></script>
+    <script src="js/libs/handlebars.js"></script>
+    <script src="js/libs/humane.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/live.js"></script>
+    <script src="js/controllers/bothSelected.js"></script>
+    <script src="js/controllers/homeSelected.js"></script>
+    <script src="js/controllers/awaySelected.js"></script>
+    <script src="js/controllers/hometeam.js"></script>
+    <script src="js/controllers/awayteam.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script>
+      team = {
+        awayPlayers: [],
+        homePlayers: []
+      };
+
+  var myGameLiveRef = new Firebase('https://jv-foosball.firebaseIO.com/games');
+  var myGameLiveRefQuery = myGameLiveRef.limit(1);
+
+  myGameLiveRefQuery.on('child_added', function(snapshot) {
+      var messageInfo = snapshot.val();
+      if(!messageInfo.live){
+        App.load('home');
+      }else{
+        App.load('live', messageInfo);
+      }
+  });
+
+  // App.load('home');
+       
+    </script>
+  </body>
+</html>

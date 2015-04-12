@@ -1,0 +1,20 @@
+{
+  "name": "hackathon-starter",
+  "version": "2.2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sahat/hackathon-starter.git"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "connect-assets": "^3.0.1",
+    "express": "^4.4.1",
+    "lodash": "^2.4.1",
+    "method-override": "^2.0.1",
+    "firebase": "1.0.17",
+    "serialport": "1.4.0"
+  }
+}
