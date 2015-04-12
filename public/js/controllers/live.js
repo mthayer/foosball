@@ -7,7 +7,7 @@ App.controller('live', function(page, data) {
     if(data){
         updateBoard(data);
     }
-    var myGameLive = new Firebase('https://jv-foosball.firebaseIO.com/games');
+    var myGameLive = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games');
     var myGameLiveQuery = myGameLive.limit(1);
     // GOAL
     myGameLiveQuery.on('child_changed', function(snapshot) {
@@ -56,7 +56,7 @@ App.controller('live', function(page, data) {
         }
 
     $(page).find("#ending-game").on('click', function(){
-    	var myGameEndRef = new Firebase('https://jv-foosball.firebaseIO.com/games/'+localStorage.getItem("live-game"));
+    	var myGameEndRef = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games/'+localStorage.getItem("live-game"));
     	myGameEndRef.update({live: false});
         console.log('live updated');
         localStorage.clear();

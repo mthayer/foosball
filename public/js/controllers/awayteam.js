@@ -2,7 +2,7 @@
 App.controller('away-team', function (page) {
   team.awayPlayers = [];
  
-    var myPlayers = new Firebase('https://jv-foosball.firebaseIO.com/players');
+    var myPlayers = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/players');
     myPlayers.on('value', function(snapshot) {
       playerData(snapshot.val())
     });

@@ -167,7 +167,7 @@
         homePlayers: []
       };
 
-  var myGameLiveRef = new Firebase('https://jv-foosball.firebaseIO.com/games');
+  var myGameLiveRef = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games');
   var myGameLiveRefQuery = myGameLiveRef.limit(1);
 
   myGameLiveRefQuery.on('child_added', function(snapshot) {

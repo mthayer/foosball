@@ -10,7 +10,7 @@ var connectAssets = require('connect-assets');
 var sys = require("sys");
 var Firebase = require('firebase');
 
-var myRootRef = new Firebase('https://jv-foosball.firebaseIO.com/games' );
+var myRootRef = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games' );
 
 // UNCOMMENT BELOW WHEN SERIAL CONNECTED
 // var serialport = require("serialport");
@@ -36,14 +36,14 @@ myRootRef.limit(1).on("child_added", function(snapshot) {
         
         if(data[0] == 49){
           console.log("home scored");
-          var myGameUpdate = new Firebase('https://jv-foosball.firebaseIO.com/games/'+gameName);
+          var myGameUpdate = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games/'+gameName);
      
           currentGameData.homeScore += 1
           myGameUpdate.update({homeScore: currentGameData.homeScore});
         }
         if(data[0] == 50){
           console.log("away scored");
-          var myGameUpdate = new Firebase('https://jv-foosball.firebaseIO.com/games/'+gameName);
+          var myGameUpdate = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games/'+gameName);
      
           currentGameData.awayScore += 1
           myGameUpdate.update({awayScore: currentGameData.awayScore});

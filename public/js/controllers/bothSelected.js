@@ -16,7 +16,7 @@ App.controller('bothSelected', function (page, team) {
 	      	startTime: Firebase.ServerValue.TIMESTAMP
 	   }
 
-	var myGamerefBoth = new Firebase('https://jv-foosball.firebaseIO.com/games');
+	var myGamerefBoth = new Firebase('https://<YOUR FIREBASE APP NAME>.firebaseIO.com/games');
 
 	$(page).find('#kickoff-btn').on('click', function(){
 	  var newGame = myGamerefBoth.push(game);
