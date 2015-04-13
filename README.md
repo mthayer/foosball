@@ -28,10 +28,13 @@ Next you need to load the foos sketch onto the arduino. This requires some addit
 *Now it is time to hook up the lasers!*
 
 Check out this wiring diagram to see how to hook everything up. 
+coming soon
 
+Install the sketch on the arduino using the arduino IDE
+coming soon
 
 ###A little more on how it works
 
 When a user selects a team and starts the game from the web app the raspberry pi (server) send a serial command to the arduino board to turn on the laser gates.
 
-When ever a laser gate is broken by the ball passing through the gate the arduino send a goal command with the team that scored to the raspberry pi. The raspberry pi takes it form there and updates firebase with the new score. Since Firebase is awesome it will update the client app with the new score in real time.
+Whenever a laser gate is broken by the ball passing through the gate the arduino send a goal command with the team that scored to the raspberry pi. The raspberry pi takes it form there and updates firebase with the new score. Since Firebase is awesome it will update the client app with the new score in real time.
