@@ -38,3 +38,7 @@ coming soon
 When a user selects a team and starts the game from the web app the raspberry pi (server) send a serial command to the arduino board to turn on the laser gates.
 
 Whenever a laser gate is broken by the ball passing through the gate the arduino send a goal command with the team that scored to the raspberry pi. The raspberry pi takes it form there and updates firebase with the new score. Since Firebase is awesome it will update the client app with the new score in real time.
+
+## License
+
+Foosball is licensed under the [MIT license](http://opensource.org/licenses/MIT).
