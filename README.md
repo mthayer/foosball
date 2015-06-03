@@ -6,7 +6,7 @@ Always wanted to make your foosball table better? Well here you go. With an ardu
 Kickoff your games from a mobile device and view current game scores live on any browser.
 
 ![alt tag](https://www.evernote.com/shard/s20/sh/f0505173-971c-446c-a894-280a2a2497a1/34071a0bbfcfd378/res/e9247333-cab8-4f3c-a0bb-15ffdb249eff/skitch.png?resizeSmall&width=832)
-![alt tag](https://www.evernote.com/shard/s20/sh/f0505173-971c-446c-a894-280a2a2497a1/34071a0bbfcfd378/res/e9247333-cab8-4f3c-a0bb-15ffdb249eff/skitch.png?resizeSmall&width=832)
+![alt tag](https://www.evernote.com/shard/s20/sh/76326f8b-084e-4522-a2f8-cae6d5a0f526/ab058e9b0749924f/res/6d809d46-a113-488d-94ce-29f54d679cd8/skitch.png?resizeSmall&width=832)
 
 ###Parts
 
