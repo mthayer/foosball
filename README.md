@@ -5,6 +5,9 @@ Always wanted to make your foosball table better? Well here you go. With an ardu
 
 Kickoff your games from a mobile device and view current game scores live on any browser.
 
+![alt tag](https://www.evernote.com/l/ABR2Mm-LCE5FIqL4yubVoPUmqwWOmwdJkk8)
+![alt tag](https://www.evernote.com/l/ABTwUFFzlxxEbKiUKAoqJJehNAcaC7_P03g)
+
 ###Parts
 
 * Arduino
